@@ -1,0 +1,1059 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Beauty Hair</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/*==========================
+RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf6f3;
+    color:#333;
+}
+
+/*==========================
+HEADER
+==========================*/
+
+header{
+
+    position:fixed;
+    top:0;
+    width:100%;
+
+    background:#3b2424;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    color:#d4af37;
+    font-size:30px;
+    font-weight:700;
+
+}
+
+nav{
+
+    display:flex;
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#d4af37;
+
+}
+
+/*==========================
+HERO
+==========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80") center/cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+.hero p{
+
+    margin:20px auto;
+    max-width:700px;
+    font-size:20px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 40px;
+
+    background:#d4af37;
+
+    color:#3b2424;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*==========================
+SECCIONES
+==========================*/
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.titulo{
+
+    text-align:center;
+    font-size:40px;
+    margin-bottom:15px;
+    color:#3b2424;
+
+}
+
+.sub{
+
+    text-align:center;
+    color:#777;
+    margin-bottom:50px;
+
+}
+
+/*==========================
+CURSOS
+==========================*/
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+
+}
+
+.card-content{
+
+    padding:25px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#666;
+
+}
+
+.card button{
+
+    margin-top:20px;
+
+    border:none;
+
+    background:#3b2424;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
+
+.card button:hover{
+
+    background:#d4af37;
+    color:#3b2424;
+
+}
+
+/*==========================
+BENEFICIOS
+==========================*/
+
+.beneficios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.item{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.item h3{
+
+    color:#3b2424;
+    margin-bottom:15px;
+
+}
+
+/*==========================
+GALERIA
+==========================*/
+
+.galeria{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.galeria img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.4s;
+
+}
+
+.galeria img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================
+CONTACTO
+==========================*/
+
+.contacto{
+
+    background:#3b2424;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+form{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    margin:10px 0;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+textarea{
+
+    height:150px;
+
+}
+
+button.enviar{
+
+    background:#d4af37;
+
+    color:#3b2424;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+
+    background:#241414;
+
+    color:#ddd;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Beauty Hair</div>
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#">Cursos</a>
+<a href="#">Beneficios</a>
+<a href="#">Galería</a>
+<a href="#">Contacto</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Curso Profesional de Peluquería</h1>
+
+<p>
+Aprendé corte femenino y masculino, colorimetría, peinados, brushing,
+tratamientos capilares y técnicas modernas con clases prácticas.
+</p>
+
+<a href="#" class="btn">Inscribirme</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Nuestros Cursos</h2>
+
+<p class="sub">
+Elegí la capacitación ideal para comenzar tu carrera.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Peluquería Profesional</h3>
+
+<p>
+Curso completo desde nivel inicial hasta avanzado.
+</p>
+
+<button>Más información</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Colorimetría</h3>
+
+<p>
+Balayage, reflejos, iluminación y color profesional.
+</p>
+
+<button>Más información</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Peinados</h3>
+
+<p>
+Novias, fiestas, eventos y técnicas modernas.
+</p>
+
+<button>Más información</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">¿Por qué estudiar con nosotros?</h2>
+
+<div class="beneficios">
+
+<div class="item">
+<h3>✔ Clases prácticas</h3>
+<p>Más del 80% del curso es práctica.</p>
+</div>
+
+<div class="item">
+<h3>✔ Certificado</h3>
+<p>Entrega de certificado al finalizar.</p>
+</div>
+
+<div class="item">
+<h3>✔ Profesores expertos</h3>
+<p>Capacitación con profesionales del rubro.</p>
+</div>
+
+<div class="item">
+<h3>✔ Bolsa de trabajo</h3>
+<p>Ayuda para comenzar tu carrera.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Trabajos de nuestros alumnos</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80">
+
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80">
+
+</div>
+
+<!--==========================
+CERTIFICACIONES DE LA PROFESORA
+Colocar esta sección debajo de "Beneficios"
+===========================-->
+
+<style>
+
+/*====================================
+CERTIFICACIONES
+====================================*/
+
+.certificados{
+    padding:90px 8%;
+    background:#fffaf5;
+}
+
+.certificados .titulo{
+    text-align:center;
+    font-size:42px;
+    color:#3b2424;
+    margin-bottom:15px;
+}
+
+.certificados .sub{
+    text-align:center;
+    color:#777;
+    margin-bottom:60px;
+    max-width:750px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.certificados-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.certificado{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    position:relative;
+}
+
+.certificado:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(212,175,55,.25);
+}
+
+.certificado img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.certificado:hover img{
+    transform:scale(1.05);
+}
+
+.sello{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#d4af37;
+    color:#3b2424;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.info-certificado{
+    padding:25px;
+}
+
+.info-certificado h3{
+    color:#3b2424;
+    margin-bottom:12px;
+}
+
+.info-certificado p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.datos{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:14px;
+    color:#888;
+    border-top:1px solid #eee;
+    padding-top:15px;
+}
+
+.trayectoria{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.numero{
+    background:white;
+    text-align:center;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.numero h2{
+    color:#d4af37;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.numero p{
+    color:#555;
+}
+
+@media(max-width:768px){
+
+.certificados .titulo{
+    font-size:34px;
+}
+
+.certificado img{
+    height:280px;
+}
+
+}
+
+</style>
+
+<section class="certificados">
+
+    <h2 class="titulo">
+        Certificaciones de la Profesora
+    </h2>
+
+    <p class="sub">
+        Nuestra instructora cuenta con una amplia formación profesional,
+        certificaciones nacionales e internacionales y una sólida trayectoria
+        formando nuevos estilistas.
+    </p>
+
+    <div class="certificados-grid">
+
+        <div class="certificado">
+
+            <span class="sello">Certificado</span>
+
+            <img src="img/certificado1.jpg" alt="Certificado">
+
+            <div class="info-certificado">
+
+                <h3>Peluquería Profesional</h3>
+
+                <p>
+                    Formación completa en corte femenino, masculino,
+                    barbería, colorimetría y tratamientos capilares.
+                </p>
+
+                <div class="datos">
+                    <span>Instituto Nacional</span>
+                    <span>2021</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="certificado">
+
+            <span class="sello">Diploma</span>
+
+            <img src="img/certificado2.jpg" alt="Certificado">
+
+            <div class="info-certificado">
+
+                <h3>Especialización en Color</h3>
+
+                <p>
+                    Técnicas avanzadas de balayage, babylights,
+                    mechas, iluminación y corrección de color.
+                </p>
+
+                <div class="datos">
+                    <span>Academia Internacional</span>
+                    <span>2022</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="certificado">
+
+            <span class="sello">Master</span>
+
+            <img src="img/certificado3.jpg" alt="Certificado">
+
+            <div class="info-certificado">
+
+                <h3>Peinados Sociales</h3>
+
+                <p>
+                    Especialización en peinados para novias,
+                    quince años, producciones fotográficas y eventos.
+                </p>
+
+                <div class="datos">
+                    <span>Beauty School</span>
+                    <span>2023</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="certificado">
+
+            <span class="sello">Internacional</span>
+
+            <img src="img/certificado4.jpg" alt="Certificado">
+
+            <div class="info-certificado">
+
+                <h3>Capacitación Internacional</h3>
+
+                <p>
+                    Seminarios y actualización permanente sobre
+                    tendencias europeas y latinoamericanas.
+                </p>
+
+                <div class="datos">
+                    <span>Beauty Congress</span>
+                    <span>2025</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="trayectoria">
+
+        <div class="numero">
+            <h2>12+</h2>
+            <p>Años de experiencia</p>
+        </div>
+
+        <div class="numero">
+            <h2>850+</h2>
+            <p>Alumnos capacitados</p>
+        </div>
+
+        <div class="numero">
+            <h2>40+</h2>
+            <p>Certificaciones obtenidas</p>
+        </div>
+
+        <div class="numero">
+            <h2>98%</h2>
+            <p>Alumnos satisfechos</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+CONTACTO + REDES SOCIALES
+========================== -->
+
+<style>
+
+.contacto{
+    background:#2d1b1b;
+    color:#fff;
+    padding:90px 8%;
+}
+
+.contacto h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:15px;
+    color:#d4af37;
+}
+
+.contacto .sub{
+    text-align:center;
+    color:#ddd;
+    margin-bottom:50px;
+}
+
+.contacto-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    align-items:start;
+}
+
+.info-contacto h3{
+    margin-bottom:20px;
+    color:#d4af37;
+}
+
+.info-contacto p{
+    margin:15px 0;
+    font-size:17px;
+}
+
+.info-contacto i{
+    color:#d4af37;
+    width:30px;
+    font-size:20px;
+}
+
+.redes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+}
+
+.redes a{
+    width:55px;
+    height:55px;
+    background:#fff;
+    color:#2d1b1b;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.redes a:hover{
+    background:#d4af37;
+    transform:translateY(-5px) scale(1.08);
+}
+
+.contacto form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contacto input,
+.contacto textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contacto textarea{
+    height:160px;
+    resize:none;
+}
+
+.contacto button{
+    background:#d4af37;
+    color:#2d1b1b;
+    border:none;
+    padding:16px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contacto button:hover{
+    background:#f3cd58;
+}
+
+@media(max-width:768px){
+
+.contacto h2{
+    font-size:32px;
+}
+
+.redes{
+    justify-content:center;
+}
+
+}
+
+</style>
+
+<section class="contacto" id="contacto">
+
+<h2>Contacto</h2>
+
+<p class="sub">
+¿Tenés dudas? Escribinos o seguinos en nuestras redes sociales.
+</p>
+
+<div class="contacto-grid">
+
+<div class="info-contacto">
+
+<h3>Información</h3>
+
+<p><i class="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
+
+<p><i class="fa-solid fa-phone"></i> +54 9 11 1234-5678</p>
+
+<p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +54 9 11 1234-5678</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@beautyhair.com</p>
+
+<h3>Seguinos</h3>
+
+<div class="redes">
+
+<a href="https://wa.me/5491112345678" target="_blank" title="WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="https://facebook.com/" target="_blank" title="Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://instagram.com/" target="_blank" title="Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://tiktok.com/" target="_blank" title="TikTok">
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+<a href="https://youtube.com/" target="_blank" title="YouTube">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+</div>
+
+
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+<footer>
+
+© 2026 Beauty Hair Academy - Todos los derechos reservados.
+
+</footer>
+
+</body>
+</html>
+```
